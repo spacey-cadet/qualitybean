@@ -82,16 +82,16 @@ body {
     gap: 1rem;
 }
 .image-product{
+    background-color: var(--color-bg);
     width:400px ;
     height: 400px;
-    padding: 1rem;
     border: 1px solid black;
     border-radius: 40px;
 }
 .image-product-standalone{
+    background-color: var(--color-bg);
     width:600px ;
     height: 400px;
-    padding: 1rem;
     border: 1px solid black;
     border-radius: 40px;
     position: relative;
