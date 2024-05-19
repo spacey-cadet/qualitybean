@@ -55,20 +55,12 @@ body {
     position: relative;
     top: 20%;
 }
-.overview-text .overview-span-1{
-    position: relative;
-    top: 30%;
-    left: 10%;
-    width: fit-content;
-    font-size: 50px;
-    font-weight: 400;
-}
 .overview-text .overview-span-2{
     position: relative;
     top: 30%;
-    left: 10%;
+    left: 15%;
     width: fit-content;
-    font-size: 25px;
+    font-size: 50px;
     font-weight: 400;
 }
 /*product*/
@@ -176,7 +168,7 @@ body {
 .header{
     display: flex;
     flex-direction: row;
-    background-color:#b9e992 ;
+    background-color:#d0eeb8 ;
     height: 4rem;
     position: sticky;
     top: 0;
@@ -255,6 +247,14 @@ body {
     }
     .product p{
         font-size: 30px;
+    }
+    .overview-text .overview-span-2{
+        position: relative;
+        top: 30%;
+        left: 10%;
+        width: fit-content;
+        font-size: 25px;
+        font-weight: 400;
     }
     
 }
