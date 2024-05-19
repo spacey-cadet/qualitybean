@@ -8,7 +8,10 @@
     <title>QualityBean</title>
 </head>
 <body>
-   
+    <header class="header">
+        <p>QualityBean </p>
+        <a class="link" href="#">Our Team</a>   
+    </header>
     <main class="main">
         <section class="view overview">
             <div class="overlay"></div>
@@ -18,16 +21,22 @@
             </p>
         </section>
         <section class="view product">
-            <img src="./assets/ourproduct.png" class="image-product"/> 
-            <img src="./assets/uniqueprodut.png" class="image-product"/> 
+            <p> The Product</p>
             <div class="desc">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                    <img src="./assets/Group 1.svg" class="image-product"/>
+                 </div>
+                <div>
+                    <img src="./assets/Group 2.svg" class="image-product"/> 
+                </div>
+                <div>
+                    <img src="./assets/Group 3.svg" class="image-product"/> 
+                </div>
             </div>
         </section>
-        <marquee class="view team">
-           <div class="team-div">
+        <p class="team-heading"> Meet The team</p>
+        <section class="view team marquee" id="team">
+           <div class=" marquee-content">
                 <div class="card-member">
                     <div class="image">
                         <img src="./assets/Person.svg" class="person"/>
@@ -65,9 +74,16 @@
                     <div class="member-details"><span class="name">John Kibet</span> <br> <span class="role">IoT Programmer</span></div>
                 </div>
             </div>
-        </marquee>
+        </section>
     </main>
-    <footer class="footer">Join Us In Our Journey To Modernize Bean Storage </footer>
+    <footer class="footer">
+        <p>Join Us In Our Journey To Modernize Bean Storage</p> 
+        <div class="footer-icon-div"> 
+            <img src="./assets//jhub.jpg" class="footer-icon"/>
+            <img src="./assets//jkuatlogo.jpg" class="footer-icon"/>
+        </div>
+        <p> <br> Phone:0722599242 <br> Email: theo.korirchbng@gmail.com</p>
+    </footer>
     <script src="./qualitybean.js" />
 </body>
 </html>

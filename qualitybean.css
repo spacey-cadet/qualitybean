@@ -8,10 +8,11 @@
 body {
 	margin: 0;
 	--color-text: #000;
-    --color-bg: hsl(180, 8%, 3%);
+    --color-bg: hsl(180, 1%, 79%);
     --box-shadow: 2px 1px 2px  white;
 	color: var(--color-text);
-	background-color: var(--color-bg);
+    background: radial-gradient(ellipse at top, hsl(180, 1%, 79%), hsl(180, 1%, 79%), transparent),
+    radial-gradient(ellipse at bottom, #4d9f0c, transparent);;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	-webkit-font-smoothing: antialiased;
@@ -24,6 +25,7 @@ body {
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
+    top: -4rem;
 }
 
 /*overview*/
@@ -75,20 +77,63 @@ body {
     flex-direction: column;
     gap: 1rem;
 }
-.product .image-product{
-    width: 110%;
+.product p{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    position: relative;
+    margin: 0;
+}
+.desc{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.image-product{
+    width:400px ;
+    height: 400px;
     padding: 1rem;
+    border: 1px solid black;
     border-radius: 40px;
 }
-/*team*/
-.team-div {
- display: flex;
- flex-direction: row;
- gap: 1rem;
+.image-product-standalone{
+    width:600px ;
+    height: 400px;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 40px;
+    position: relative;
+    left: 18rem;
+
 }
+/*team*/
+.team-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2px;
+    font-weight: 400;
+    padding: 1rem;  
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee-content {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 1rem;
+    animation: marquee 30s linear infinite;
+}
+
     
 .card-member{
-    background-color: #ada9ac;
+    background-color: var(--color-bg);
     display: flex;
     flex-direction: column;
     padding: .3rem;
@@ -102,7 +147,7 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 35px;
-    background-color: rgb(31, 25, 25);
+    background-color: rgb(25, 25, 31);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,9 +168,6 @@ body {
 .name{
     font-size: 17px;
 }
-.role{
-    width: 100px;
-}
 /*dropdowncontent*/
 .dropdown{
    display: none;
@@ -134,31 +176,45 @@ body {
 .header{
     display: flex;
     flex-direction: row;
-    background-color: transparent;
+    background-color:#b9e992 ;
     height: 4rem;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
+    z-index: 1000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px ;
 }
-.header .icon{
+.header p{
     position: relative;
-    width: 230px;
-    height: 50px;
+    font-size: 45px;
+    margin: 0;
 }
-.hamburger-menu{
-    display: none;
+.link{
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
 }
-.btn{
-    color: black;
-    background-color: transparent;
-}
+
 /*footer*/
 .footer{
     position: relative;
     padding: 4rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    color: white;
+}
+.footer-icon-div{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.footer-icon{
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
 }
 @media screen  and (max-width:600px){
     .overview-text .overview-span-2{
@@ -175,26 +231,41 @@ body {
         position: relative;
         outline: none;
     }
+    .desc{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
     .product .image-product{
         width: 100%;
     }
-    .toggled{
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-        height: fit-content;
-        background-color: #ada9ac;
-        padding: .5rem;
-        box-shadow: var(--box-shadow);
-    }
-    .link{
-        text-decoration: none;
-        color: inherit;
-    }
+   
     .footer{
         font-size: 10px;
     }
+    .image-product{
+        width:90% ;
+        height: 300px;
+    }
+    .image-product-standalone{
+        width:400px ;
+        height: 400px;
+        padding: 1rem;
+        left: 1rem;
+    }
+    .product p{
+        font-size: 30px;
+    }
     
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 
